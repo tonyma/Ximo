@@ -27,6 +27,8 @@ namespace Sample.Domain
         {
             builder.RegisterCommandHandler<CreateAccount, CreateAccountHandler>();
             builder.Decorate<ICommandHandler<CreateAccount>, CommandLoggingDecorator<CreateAccount>>();
+            //If we want DEFAULT tranisent fault handling
+            builder.Decorate<ICommandHandler<CreateAccount>, TransientSqlErrorCommandHandlerDecorator<CreateAccount>>();
 
             builder.RegisterCommandHandler<UpdateAccountAddress, UpdateAccountAddressHandler>();
             builder.Decorate<ICommandHandler<UpdateAccountAddress>, CommandLoggingDecorator<UpdateAccountAddress>>();

@@ -38,7 +38,7 @@ namespace SampleRunner
                 commandBus.Send(createAccount);
 
                 //Simulate 6 snapshots
-                for (var i = 0; i < 60; i++)
+                for (var i = 0; i < 20; i++)
                 {
                     var updateAccount = new UpdateAccountAddress(newAccountId, $"Test {i}", null, null, null, null,
                         "Australia");
