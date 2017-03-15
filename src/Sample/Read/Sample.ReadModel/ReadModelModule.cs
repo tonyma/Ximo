@@ -27,7 +27,8 @@ namespace Sample.ReadModel
         private void RegisterContext(IServiceCollection builder)
         {
             builder.AddDbContext<ReadModelContext>(
-                options => options.UseSqlServer(Configuration.GetConnectionString("SampleDatabase")).UseLoggerFactory(null));
+                options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("SampleDatabase")).UseLoggerFactory(null));
         }
 
         private void RegisterEventHandlers(IServiceCollection builder)

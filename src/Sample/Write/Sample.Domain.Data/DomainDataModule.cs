@@ -24,7 +24,8 @@ namespace Sample.Domain.Data
         private void RegisterContext(IServiceCollection builder)
         {
             var connectionString = Configuration.GetConnectionString("SampleDatabase");
-            builder.AddDbContext<DomainDataContext>(options => options.UseSqlServer(connectionString).UseLoggerFactory(null));
+            builder.AddDbContext<DomainDataContext>(
+                options => options.UseSqlServer(connectionString).UseLoggerFactory(null));
         }
 
         private static void RegisterRepositories(IServiceCollection builder)

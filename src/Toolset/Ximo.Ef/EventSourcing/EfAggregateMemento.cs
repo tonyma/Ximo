@@ -23,7 +23,7 @@ namespace Ximo.Ef.EventSourcing
         ///     Initializes a new instance of the <see cref="EfAggregateMemento" /> class.
         /// </summary>
         /// <param name="aggregate">The aggregate instance.</param>
-        protected EfAggregateMemento(EventSourcedAggregateRoot aggregate):this()
+        protected EfAggregateMemento(EventSourcedAggregateRoot aggregate) : this()
         {
             if (aggregate == null)
             {
